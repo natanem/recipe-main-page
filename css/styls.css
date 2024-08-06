@@ -7,27 +7,33 @@
 }
 
 :root {
-    --clr-white: hsl(0, 0%, 100%);
-    --clr-stone-100: hsl(30, 54%, 90%);
-    --clr-stone-150: hsl(30, 18%, 87%);
-    --clr-stone-600: hsl(30, 10%, 34%);
-    --clr-stone-900: hsl(24, 5%, 18%);
-    --clr-brown-800: hsl(14, 45%, 36%);
-    --clr-rose-800: hsl(332, 51%, 32%);
-    --clr-rose-50: hsl(330, 100%, 98%);
+    --clr-white: #ffffff;
+    --clr-stone-100: #f3e6d8;
+    --clr-stone-150: #e4ded8;
+    --clr-stone-600: #5f574e;
+    --clr-stone-900: #302d2c;
+    --clr-brown-800: #854632;
+    --clr-rose-800: #7b284f;
+    --clr-rose-50: #fff5fa;
+
+    color: #716c68;
 }
 
-@font-face {
-    font-family: "outfit";
-    src: url("../assets/fonts/outfit/static/Outfit-Medium.ttf");
-}
+
 
 html {}
 
 body {
-    font-family: "outfit";
+    font-family: "Outfit", sans-serif;
     font-size: 1rem;
     background-color: var(--clr-stone-100);
+
+}
+
+p {
+    color: var(--clr-stone-600);
+    font-weight: normal;
+    line-height: 1.6;
 }
 
 img {
@@ -36,11 +42,11 @@ img {
 
 ul,
 ol {
-    margin-top: 1.5rem;
-    padding: 0 2rem;
+    padding: 0 2rem 2.25rem;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
 }
 
 li {
@@ -49,11 +55,13 @@ li {
 
 
 
+
 .container {
     margin: auto;
-    padding: 2.5rem 2rem 2rem;
+    padding: 2.5rem 2rem 0;
 
 }
+
 
 
 .header-content {
@@ -61,13 +69,17 @@ li {
 }
 
 .recipe-title {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: var(--clr-stone-900);
+
 }
 
 .recipe-description {
-    line-height: 1.2;
-    font-weight: normal;
+    /* line-height: 1.4;
+    font-weight: normal; */
 }
 
 .recipe-time {
@@ -75,21 +87,29 @@ li {
     padding: 1rem 1.5rem 2rem;
     background-color: var(--clr-rose-50);
     border-radius: 10px;
-
 }
 
 
 .section-title {
-    font-size: 2.4rem;
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-size: 2rem;
+
+    color: var(--clr-brown-800);
     margin-bottom: 2.25rem;
 }
 
-section:not(:last-child) {
+.section ul,
+.section ol {
+    border-bottom: 1px solid var(--clr-stone-100);
+}
+
+.section:not(:last-child) {
     /* background: limegreen; */
     border-bottom: 1px solid #fff;
 }
 
-section:last-child p {
+.section:last-child p {
     line-height: 1.5;
 }
 
@@ -117,6 +137,15 @@ footer {
 main {
     margin-block-start: 0;
     background-color: var(--clr-white);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 
 @media (min-width: 768px) {
